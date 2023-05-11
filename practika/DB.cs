@@ -28,6 +28,6 @@ namespace practika
         public MySqlConnection GetConnection()
         {
             return connection;
-        }
+        }sdfadsf
     }
 }
