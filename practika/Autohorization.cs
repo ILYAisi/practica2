@@ -45,18 +45,19 @@ namespace practika
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();//Подключение к базе данных
            
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `user` WHERE `UserLogin`= @uL AND `UserPassword` = @uP ", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `user` WHERE `UserLogin`= @uL AND `UserPassword` = @uP ", db.GetConnection()); //Задаем команду для взаимодействия с базой данных
 
-            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = loginUser;
-            command.Parameters.Add("@up", MySqlDbType.VarChar).Value = passUser;
-          
-
+            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = loginUser; //Заглушка для пользования 
+            command.Parameters.Add("@up", MySqlDbType.VarChar).Value = passUser; //Заглушка для пользования 
 
 
-            adapter.SelectCommand = command;
-            adapter.Fill(dt);
+
+
+            adapter.SelectCommand = command; // Выполнение заданной команды для базы данных
+            adapter.Fill(dt); // Заполнение таблицы
             if (dt.Rows.Count > 0)
             {
+                // Кладём в переменные информацию из базы
                 string login = dt.Rows[0]["UserLogin"].ToString();
                 string pass = dt.Rows[0]["UserPassword"].ToString();
                 string Name = dt.Rows[0]["UserName"].ToString();
@@ -64,17 +65,17 @@ namespace practika
             
 
                 this.Hide();
-                Product form = new Product(Name, Surname);
+                Product form = new Product(Name, Surname); //Передаем "Имя", "Фамилию" в форму "Product" 
                 form.Show();
             }
             else
-                MessageBox.Show("Ошибка");
+                MessageBox.Show("Ошибка"); //Исключение если неудалось подключится к базе
             
         }
 
         private void CloseButton_Click(object sender, EventArgs e) //Кнопка закрытия программы
         {
-            this.Close();
+            this.Close(); //Закрытие окна
         }
     }
 }
