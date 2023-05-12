@@ -305,8 +305,7 @@
             this.Category.Items.AddRange(new object[] {
             "Постельные ткани",
             "Детские ткани",
-            "Ткани для изделий",
-            ""});
+            "Ткани для изделий"});
             this.Category.Location = new System.Drawing.Point(309, 143);
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(204, 28);

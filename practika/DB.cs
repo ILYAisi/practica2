@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MySqlConnection = MySql.Data.MySqlClient.MySqlConnection;
 
 namespace practika
 {
@@ -28,6 +28,6 @@ namespace practika
         public MySqlConnection GetConnection()
         {
             return connection;
-        }sdfadsf
+        }
     }
 }
