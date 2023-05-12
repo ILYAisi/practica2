@@ -99,6 +99,12 @@
     <Compile Include="Autohorization.Designer.cs">
       <DependentUpon>Autohorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListItem.Designer.cs">
+      <DependentUpon>ListItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </Compile>
     <EmbeddedResource Include="Autohorization.resx">
       <DependentUpon>Autohorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListItem.resx">
+      <DependentUpon>ListItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel2.resx">
       <DependentUpon>Panel2.cs</DependentUpon>

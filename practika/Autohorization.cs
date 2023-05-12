@@ -26,7 +26,6 @@ namespace practika
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             Products form=new Products();
             form.Show();
             this.Hide();
