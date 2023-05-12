@@ -24,7 +24,7 @@ namespace practika
 
     
 
-        private void button2_Click(object sender, EventArgs e)
+        private void GuestButton_Click(object sender, EventArgs e) //Кнопка гостя, которая после нажатия перенаправляет в другую форму
         {
             Products form=new Products();
             form.Show();
@@ -40,10 +40,10 @@ namespace practika
             
 
 
-            DB db = new DB();
+            DB db = new DB(); 
             DataTable dt = new DataTable();
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();//Подключение к базе данных
            
             MySqlCommand command = new MySqlCommand("SELECT * FROM `user` WHERE `UserLogin`= @uL AND `UserPassword` = @uP ", db.GetConnection());
 
@@ -72,7 +72,7 @@ namespace practika
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e) //Кнопка закрытия программы
         {
             this.Close();
         }
